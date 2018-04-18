@@ -1,0 +1,26 @@
+.navbar, .page-footer { transition: 1s all; }
+.purple-skin .navbar    { background-color: #aa66cc}
+.purple-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #aa66cc;  border-bottom: 1px solid #aa66cc;  }
+.purple-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #aa66cc; }
+.purple-skin .page-footer{background-color: #9933CC}
+.blue-skin .navbar      { background-color: #1e88e5}
+.blue-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #1e88e5;  border-bottom: 1px solid #1e88e5;  }
+.blue-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #1e88e5; }
+.blue-skin .page-footer { background-color: #1976d2}
+.red-skin .page-footer  { background-color: #c62828}
+.red-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #c62828;  border-bottom: 1px solid #c62828;  }
+.red-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #c62828; }
+.red-skin .navbar       { background-color: #d32f2f}
+.green-skin .navbar     { background-color: #43a047}
+.green-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #43a047;  border-bottom: 1px solid #43a047;  }
+.green-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #43a047; }
+.green-skin .page-footer{ background-color: #1b5e20}
+.orange-skin .navbar     { background-color: #f57c00}
+.orange-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #f57c00;  border-bottom: 1px solid #f57c00;  }
+.orange-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #f57c00; }
+.orange-skin .page-footer{ background-color: #e65100}
+.indigo-skin .navbar     { background-color: #3f51b5}
+.indigo-skin .md-form input[type=text]:focus:not([readonly]) { box-shadow: 0 1px 0 0 #3f51b5;  border-bottom: 1px solid #3f51b5;  }
+.indigo-skin .navbar.navbar-dark form .md-form input:focus:not([readonly]) { border-color: #3f51b5; }
+.indigo-skin .page-footer{ background-color: #3949ab}
+
