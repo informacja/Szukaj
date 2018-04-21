@@ -37,7 +37,7 @@
 
     echo '<main class="p-1 px-5">';
 
-    handle_request();
+    handle_request();   // obsługa poleceń z teblicy $_GET
 
     echo "</main>";
 
