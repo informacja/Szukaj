@@ -19,11 +19,15 @@
                 <a href="?los" role="button" class="btn btn-secondary" onclick="parent.window.location.reload(true)"><i class="fa fa-send-o mr-1"></i>
                     <span class="hidden-phone">Losuj książkę</span> </a>
             </div>
+            <?php if (empty($_GET) ){ ?>
             <div class="text-center mt-1 d-sm-inline-block d-md-none">
                 <br>
-                <label><input type="checkbox" name="display_all">&nbsp; Wyświetl pełne opisy</label>
+                <label>
+                    <input type="checkbox" onclick="set_display_settings(this);"
+                        <?php if(isset($_COOKIE['display_all']) && $_COOKIE['display_all'] == true ) echo 'checked'; ?>
+                    > &nbsp; Wyświetl pełne opisy</label>
             </div>
-
+            <?php } ?>
 
             <!--            <div class="btn-group mr-1 pt-3 d-block" data-toggle="buttons">-->
             <!--                <label class="btn btn-primary  form-check-label">-->
@@ -37,3 +41,19 @@
         </section>
     </form>
 </div>
+<script>
+function set_display_settings( chbox ){
+
+    var exdate = new Date();
+
+    if ( chbox.checked ) {
+         exdate.setDate(exdate.getDate() + 3600 * 24 * 356);
+         document.cookie = "display_all=" + chbox.checked + "; expires=" + exdate.toUTCString();
+    }
+    else
+    {
+        exdate.setDate(exdate.getDate() -100);
+        document.cookie = "display_all=" + chbox.checked +"; Max-Age=-99999999; expires=" + exdate.toUTCString(); // usuwanie ciasteczka
+    }
+}
+</script>
