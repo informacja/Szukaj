@@ -68,10 +68,10 @@
         $("#search").focus();
     }
 
-    $('.text-truncate').on('click', function() {
-//    $('.text-truncate').each(function() {
-        $(this).removeClass("text-truncate");
-    });
+//     $('.text-truncate').on('click', function() {
+// //    $('.text-truncate').each(function() {
+//         $(this).removeClass("text-truncate");
+//     });
 
 </script>
 </body>
