@@ -19,6 +19,11 @@
                 <a href="?los" role="button" class="btn btn-secondary" onclick="parent.window.location.reload(true)"><i class="fa fa-send-o mr-1"></i>
                     <span class="hidden-phone">Losuj książkę</span> </a>
             </div>
+            <div class="text-center mt-1 d-sm-inline-block d-md-none">
+                <br>
+                <label><input type="checkbox" name="display_all">&nbsp; Wyświetl pełne opisy</label>
+            </div>
+
 
             <!--            <div class="btn-group mr-1 pt-3 d-block" data-toggle="buttons">-->
             <!--                <label class="btn btn-primary  form-check-label">-->
