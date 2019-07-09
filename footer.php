@@ -35,7 +35,10 @@
                                         <button class="btn btn-sm btn-indigo"   onclick="set_color('indigo-skin');" ></button>
                                         <button class="btn btn-sm btn-purple"   onclick="set_color('purple-skin');" ></button>
 
-<!--                                    <span class="text-muted">Toggleable via the navbar brand.</span>-->
+<!--                                        <div class="hoverable" style="width: 14px; height: 14px; background:red;"></div>-->
+<!--                                        <div class="hoverable" style="width: 14px; height: 14px; background:green;"></div>-->
+                                        <!--                    <h4 class="text-white">Collapsed content</h4>-->
+<!--                                        <span class="text-muted">Toggleable via the navbar brand.</span>-->
                                     </div>
 
                                 </div>
@@ -47,9 +50,9 @@
                         </div>
 </div>
 <!--            </div>-->
-<!--            /.First column-->
+            <!--/.First column-->
 
-<!--            Second column-->
+            <!--Second column-->
 <!--            <div class="col-md-6">-->
 <!--                <h5 class="text-uppercase">Polecane</h5>-->
 <!--                <ul class="list-unstyled">-->
@@ -60,7 +63,7 @@
 <!--                </ul>-->
 <!--            </div>-->
 <!--            /.Second column-->
-        </div>
+<!--        </div>-->
 
     </div>
     <!--/.Footer Links-->
@@ -69,7 +72,7 @@
     <div class="footer-copyright py-3 text-center">
         <div class="d-flex justify-content-between px-2 ">
             <a id="day_count" class="disabled"></a>
-            <a href="http://www.zst-tarnow.pl/kategorie/biblioteka"> ZST Tarnów</a>
+            <a href="https://www.zst-tarnow.pl/category/biblioteka/"> ZST Tarnów</a>
             <a id="online_count" class="text-muted disabled" ></a>
 
 
@@ -109,7 +112,8 @@
             xmlhttp=false;
         }
     }
-    /* Uwaga żeby zapytanie do komputera w bibliotece działało, cała strona musi zostać załadowana jako HTTPS */
+    /* Uwaga żeby zapytanie działało, cała strona musi zostać załadowana jako HTTPS */
+    //xmlhttp.open("HEAD", 'http://192.168.1.51/powered_on.php',true);
     if (location.protocol != 'https:') {
         xmlhttp.open("HEAD", "http://biblioteka/powered_on.php", true);
         // location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
@@ -130,7 +134,7 @@
             xmlhttp.send(null)
         }
     }
-    xmlhttp.send(null)
+    //xmlhttp.send(null)
 
 </script>
 

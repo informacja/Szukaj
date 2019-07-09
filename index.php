@@ -43,8 +43,8 @@
 
     include "footer.php";
 
-    if ( empty($_GET))
-        include "contact_form.php";
+    //if ( empty($_GET))
+    //    include "contact_form.php";
 
 ?>
     <!-- SCRIPTS -->
@@ -68,10 +68,10 @@
         $("#search").focus();
     }
 
-//     $('.text-truncate').on('click', function() {
-// //    $('.text-truncate').each(function() {
-//         $(this).removeClass("text-truncate");
-//     });
+    $('.text-truncate').on('click', function() {
+//    $('.text-truncate').each(function() {
+        $(this).removeClass("text-truncate");
+    });
 
 </script>
 </body>
@@ -85,6 +85,11 @@ function handle_request()
 {
     include_once "functions.php";
     $config = include "config.php";
+
+    if(!empty($_GET['category_request'])) {
+        $a = $_GET['category_request'];
+        header('Location: index.php?request='.$a.'');
+    }
 
     if(!empty( $_GET['request'] ))
         include "reaction.php";

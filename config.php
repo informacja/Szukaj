@@ -8,10 +8,10 @@ if( substr($db_dir, -1) != "/")
 
 return array(
     'path' => 'mdb/',
-    'csv'   => 'db/04.2018.csv',
+    'csv'   => 'db/05.2019.csv',
     'db_dir' => $db_dir,
     'log_request_filename' => "db/log_request.htm",
-    'admin_mail' => 'piotrwzst@gmail.com,wik3831@tlen.pl',
+    'admin_mail' => 'w.kryzia@zst-tarnow.pl',
     'request_save_log' => true
  );
 ?>

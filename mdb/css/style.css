@@ -117,3 +117,7 @@ dd{ font-weight: 500;}
 /*}*/
 
 .sidebar{ position: absolute; top:27%; right: 0; }
+
+select::first-letter {
+    text-transform: uppercase;
+}

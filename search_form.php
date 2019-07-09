@@ -3,14 +3,39 @@
     <form class="form-inline"  action="" method="get" >
         <section class="text-center w-100">
 
-            <input class="form-control form-control-sm d-inline-block w-75 ml-1 <?php if(!isset($_GET['los'])){ ?>animated headShake <?php } ?>"
-                   id="search" name="request" type="text" placeholder="Tytuł książki, Autor, ISBN ..." aria-label="Search" required>
+            <input style="width:85%!important;" class="form-control form-control-sm d-inline-block ml-1 <?php if(!isset($_GET['los'])){ ?>animated headShake <?php } ?>"
+                   id="search" name="request" type="text" placeholder="Tytuł książki, Autor, ISBN ..." aria-label="Search" >
             <button style="background: transparent; border: 0; " id="search_b" class="d-none" type="submit">
                 <i class="fa fa-search " aria-hidden="false"></i>
             </button>
             <button style="background: transparent; border: 0;" name="fast" aria-label="Szybkie wyszukiwanie bez rozróżniania wielkości znaków" class="hint--top" type="submit">
                 <i class="fa fa-bolt " aria-hidden="false"></i>
             </button>
+
+            <select class="mdb-select md-form w-75 browser-default custom-select" name="category_request">
+                <option value="" disabled selected>lub wybierz kategorię...</option>
+                <?php require("categories.php") ?>
+                <!-- <option value="Beletrystyka">Beletrystyka</option>
+                <option value="Lektury">Lektury</option>
+                <option value="Podręczniki">Podręczniki</option>
+                <option value="Naukowe i popularnonaukowe">Naukowe i popularnonaukowe</option>
+                <option value="Dydaktyka i pedagogika">Dydaktyka i pedagogika</option>
+                <option value="Wydawnictwa informacyjne">Wydawnictwa informacyjne</option>
+                <option value="Inne">Inne</option> -->
+            </select>
+            <label></label>
+                <!-- <input list="book-categories" name="category_request" style="margin-top:2rem!important;width:50%!important" placeholder="lub wybierz kategorię...">
+                <datalist id="book-categories">
+                    <option value="Beletrystyka">
+                    <option value="Lektury">
+                    <option value="Podręczniki">
+                    <option value="Naukowe i popularnonaukowe">
+                    <option value="Dydaktyka i pedagogika">
+                    <option value="Wydawnictwa informacyjne">
+                    <option value="Inne">
+                </datalist>  -->
+
+
 
             <div  class="btn-group mt-4 p-auto w-75 d-inline-flex justify-content-sm-around " id="radio_buttons" >
                 <button type="button" class="btn btn-primary " onClick="document.getElementById('search_b').click();">
@@ -19,15 +44,6 @@
                 <a href="?los" role="button" class="btn btn-secondary" onclick="parent.window.location.reload(true)"><i class="fa fa-send-o mr-1"></i>
                     <span class="hidden-phone">Losuj książkę</span> </a>
             </div>
-            <?php if (empty($_GET) ){ ?>
-            <div class="text-center mt-1 d-sm-inline-block d-md-none">
-                <br>
-                <label>
-                    <input type="checkbox" onclick="set_display_settings(this);"
-                        <?php if(isset($_COOKIE['display_all']) && $_COOKIE['display_all'] == true ) echo 'checked'; ?>
-                    > &nbsp; Wyświetl pełne opisy</label>
-            </div>
-            <?php } ?>
 
             <!--            <div class="btn-group mr-1 pt-3 d-block" data-toggle="buttons">-->
             <!--                <label class="btn btn-primary  form-check-label">-->
@@ -41,19 +57,3 @@
         </section>
     </form>
 </div>
-<script>
-function set_display_settings( chbox ){
-
-    var exdate = new Date();
-
-    if ( chbox.checked ) {
-         exdate.setDate(exdate.getDate() + 3600 * 24 * 356);
-         document.cookie = "display_all=" + chbox.checked + "; expires=" + exdate.toUTCString();
-    }
-    else
-    {
-        exdate.setDate(exdate.getDate() -100);
-        document.cookie = "display_all=" + chbox.checked +"; Max-Age=-99999999; expires=" + exdate.toUTCString(); // usuwanie ciasteczka
-    }
-}
-</script>

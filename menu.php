@@ -5,7 +5,15 @@
         <a <?php if ( isset($_GET['request']) && $_GET['request'] == 'Durer' ) echo "href=?admin"; ?> >
         <span class="badge badge-success z-depth-1 mx-1 clearfix d-none d-sm-inline-block">Beta</span>
         </a>
+		<?php if ( isset($_GET['check'])  )
+		{
+			?>
+			 <a href="db/log_request.htm" >
+			<span class="badge badge-info z-depth-1 mx-1 clearfix d-none d-sm-inline-block">Aktywność</span>
+			</a>
+		<?php } ?>
         <ul class="navbar-nav mr-auto">
+
 <!--            <li class="nav-item active">-->
 <!--                <a class="nav-link waves-effect waves-light" href="#">Home-->
 <!--                    <span class="sr-only">(current)</span>-->
