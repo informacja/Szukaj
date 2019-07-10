@@ -98,17 +98,17 @@ function print_books($many_of_arrays,$headers)
                             <dt class="col-sm-3">Sygnatura</dt>
                             <dd class="col-sm-9"><?php echo $book[$headers['ZKS_SYGNAT']]; ?>  </dd>
 
-                            <dt class="col-sm-3 d-none d-sm-block">Wydawca</dt>
-                            <dd class="col-sm-9 d-none d-sm-block"><?php echo $book[$headers['OPIS_WYDAWCA']]; ?>  </dd>
+                            <dt class="col-sm-3 d-sm-block">Wydawca</dt>
+                            <dd class="col-sm-9 d-sm-block"><?php echo $book[$headers['OPIS_WYDAWCA']]; ?>  </dd>
 
-                            <dt class="col-sm-3 d-none d-sm-block">Miejsce i rok wydania</dt>
-                            <dd class="col-sm-9 d-none d-sm-block"><?php echo $book[$headers['OPIS_MWYD']];
+                            <dt class="col-sm-3 d-sm-block">Miejsce i rok wydania</dt>
+                            <dd class="col-sm-9 d-sm-block"><?php echo $book[$headers['OPIS_MWYD']];
                                 echo ' ';
                                 echo $book[$headers['OPIS_RWYD']]; ?>  </dd>
 
                             <?php if (isset($book['ISBN'])) { ?>
-                                <dt class="col-sm-3 d-none d-md-block">ISBN</dt>
-                                <dd class="col-sm-9 d-none d-md-block"><?php echo $book['ISBN']; ?>  </dd>
+                                <dt class="col-sm-3  d-md-block">ISBN</dt>
+                                <dd class="col-sm-9  d-md-block"><?php echo $book['ISBN']; ?>  </dd>
                             <?php } ?>
 
                         </dl>
@@ -469,6 +469,12 @@ function display_files_to_convert()
 
 function convert_rpt2csv( $filename, $outfile = "")
 {
+    if (!file_exists($filename))
+    {
+        echo "<h3>Error: file <i class='red-text'>$filename</i> not exist in rpt2csv()</h3>";
+        return;
+    }
+
     if (empty($outfile))
     {
         $buff = explode( '.',$filename);

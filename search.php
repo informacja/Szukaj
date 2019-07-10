@@ -1,13 +1,15 @@
 <h2 class=" p-4">Katalog online</h2>
-<div style="height: 10vh; margin-top: 8vh;">
+    <div class="flex-center flex-column p-3 m-2">
+        <p class="animated fadeIn mb-2 mt-5 text-center  ">Sprawdź czy książka która Cię interesuje jest w zbiorach biblioteki, przykłady poniżej</p>
+    </div>
+
+<div>
         <?php include "search_form.php"; ?>
 </div>
 
-<div>
-    <div class="flex-center flex-column p-3">
-        <p class="animated fadeIn mb-2 mt-5 text-center  ">Sprawdź czy książka która Cię interesuje jest w zbiorach biblioteki, przykłady poniżej:</p>
-    </div>
-    <div class="text-center">
+<div class="mt-2" >
+
+    <div class="text-center" style="margin-top: 40px">
         <i>
             <a href="?request=Durer&fast">      <tt class="animated fadeIn mb-3 mt-5 ">Durer</tt><br></a>
             <a href="?request=Tarnów&fast">     <tt class="animated fadeIn mb-3 mt-5 ">Tarnów</tt><br></a>
