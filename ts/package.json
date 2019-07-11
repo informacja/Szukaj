@@ -1,0 +1,29 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "scripts": {
+    "test": "parser.js testArg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/informacja/szukaj.git"
+  },
+  "keywords": [
+    "typescript",
+    "parser"
+  ],
+  "author": "Hera",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/informacja/szukaj/issues"
+  },
+  "homepage": "https://github.com/informacja/szukaj#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/node": "^7.10.6"
+  }
+}
