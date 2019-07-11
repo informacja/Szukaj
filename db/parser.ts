@@ -2,6 +2,29 @@
 
 // onload = () => console.log("red");
 
+// let document:Document = window.document;
+// let body:Body = document.body;
+
+// var el = document.getElementById('element');\
+var x = document.getElementsByTagName("*");
+l = x.length;
+for (i = 0; i < l; i++) {
+    document.write(x[i].tagName + "<br>");
+}
+
+document.write('<div style="position:absolute;right:10px;width:10vw;height:3%;opacity:0.3;z-index:100;background:#000;">TO DO:<br>Filtracja </div>' );
+
+
+var bo = document.getElementsByTagName('body');
+
+console.warn(bo);
+
+bd.HTMLCollection[0] += '<p><a id="clickme" href="#">Click me</a></p>';
+document.getElementById('clickme').onclick = function (e) {
+    e.preventDefault();
+    document.body.innerHTML +='<div style="position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;"></div>';
+}
+
 let DBFileName = "../db/log_request.htm";
 // fs.readFileSync(DBFileName,'utf8');
 
