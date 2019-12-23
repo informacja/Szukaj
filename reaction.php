@@ -10,7 +10,7 @@
 
     $request = "";
     if (isset($_GET['request']))
-        $request=$_GET['request'];
+        $request = strip_tags($_GET['request']);
 
     if(isset($_GET['fast']))
 //        setcookie("fast",1, date(time())+3600*24*356);
